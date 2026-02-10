@@ -78,26 +78,32 @@ def generate_report() -> str:
 	report_lines.append("GAMETRACKER - Rapport de synthese")
 	report_lines.append(f"Genere le : {now}")
 	report_lines.append(separator)
+	
 	report_lines.append("--- Statistiques generales ---")
 	report_lines.append(f"Nombre de joueurs : {total_players}")
 	report_lines.append(f"Nombre de scores : {total_scores}")
 	report_lines.append(f"Nombre de jeux : {total_games}")
+	report_lines.append("")
 
 	report_lines.append("--- Top 5 des meilleurs scores ---")
 	for idx, (username, game, score) in enumerate(top_scores, start=1):
 		report_lines.append(f"{idx}. {username} | {game} | {score}")
+	report_lines.append("")
 
 	report_lines.append("--- Score moyen par jeu ---")
 	for game, avg_score in avg_scores:
 		report_lines.append(f"{game} : {avg_score:.1f}")
+	report_lines.append("")
 
 	report_lines.append("--- Joueurs par pays ---")
 	for country, count_players in players_by_country:
 		report_lines.append(f"{country} : {count_players}")
+	report_lines.append("")
 
 	report_lines.append("--- Sessions par plateforme ---")
 	for platform, count_sessions in sessions_by_platform:
 		report_lines.append(f"{platform} : {count_sessions}")
+	report_lines.append("")
 
 	report_lines.append(separator)
 

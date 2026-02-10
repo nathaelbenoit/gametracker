@@ -58,9 +58,7 @@ gametracker/
 │       ├── Players.csv          # Données brutes des joueurs
 │       └── Scores.csv           # Données brutes des scores
 ├── output/
-│   ├── rapport.txt              # Rapport généré
-│   ├── players_export.csv       # Export des joueurs traités
-│   └── scores_export.csv        # Export des scores traités
+│   └── rapport.txt              # Rapport généré
 ├── scripts/
 │   ├── init-db.sql              # Schéma de la base
 │   ├── wait-for-db.sh           # Attente de la base
@@ -134,8 +132,6 @@ Génère un rapport avec :
 ## Fichiers générés
 
 - **output/rapport.txt** : Rapport textuel avec statistiques
-- **output/players_export.csv** : Export des joueurs traités
-- **output/scores_export.csv** : Export des scores traités
 
 ## Auteur
 
